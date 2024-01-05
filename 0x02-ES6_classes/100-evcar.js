@@ -1,11 +1,15 @@
-import { uploadPhoto, createUser } from './utils';
-
-const asyncUploadUser = async () => {
-  try {
-    return { photo: await uploadPhoto(), user: await createUser() };
-  } catch (error) {
-    return { photo: null, user: null };
+export default class Car {
+  constructor(brand, motor, color) {
+    this._brand = brand;
+    this._motor = motor;
+    this._color = color;
   }
-};
 
-export default asyncUploadUser;
+  static get [Symbol.species]() {
+    return this.prototype.constructor;
+  }
+
+  cloneCar() {
+    return new (this.constructor[Symbol.species])();
+  }
+}
