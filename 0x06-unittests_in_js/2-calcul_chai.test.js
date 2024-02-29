@@ -20,7 +20,7 @@ describe('calculateNumber', () => {
         expect(calculateNumber('DIVIDE', 1.4, 4.5)).to.equal(0.2);
     });
     it('returns error string when DIVIDE by 0', () => {
-        expect(calculateNumber('DIVIDE', 1.4, 0)).to.equal('Error: number devided by zero');
+        expect(calculateNumber('DIVIDE', 1.4, 0)).to.equal('Error');
     });
     it('should throw error if NaN passed', function () {
         expect(() => calculateNumber('SUM', NaN, 3)).to.throw();

@@ -1,19 +1,19 @@
 module.exports = function calculateNumber(type, a, b) {
-  const numberA = Number(a);
-  const numberB = Number(b);
+  const numA = Number(a);
+  const numB = Number(b);
 
-  if (Number.isNaN(numberA) || Number.isNaN(numberB))
+  if (Number.isNaN(numA) || Number.isNaN(numB))
   throw TypeError;
 
   if (type === 'SUM') {
-    return (Math.round(numberA) + Math.round(numberB));
+    return (Math.round(numA) + Math.round(numB));
   } else if (type === 'SUBTRACT') {
-    return (Math.round(numberA) - Math.round(numberB));
+    return (Math.round(numA) - Math.round(numB));
   } else if (type === 'DIVIDE') {
       if (Math.round(numB) === 0) {
-        return ('Error: number devided by zero');
+        return ('Error');
       }
-      return (Math.round(numberA) / Math.round(numberB));
+      return (Math.round(numA) / Math.round(numB));
   } else {
     throw TypeError;
   }
