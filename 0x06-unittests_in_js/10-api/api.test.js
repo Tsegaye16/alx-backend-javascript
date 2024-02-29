@@ -76,7 +76,7 @@ describe("Login", function() {
 	    url: "http://localhost:7865/login",
 	    json: true,
 	    body: {
-		userName: 'JALLOE'
+		userName: 'JOE'
 	    }
 	};
 	request.post(opt, function(err, res, body) {
@@ -89,7 +89,7 @@ describe("Login", function() {
 	    url: "http://localhost:7865/login",
 	    json: true,
 	    body: {
-		userName: 'JALLOE'
+		userName: 'JOE'
 	    }
 	};
 	request.post(opts, function(err, res, body) {
@@ -106,7 +106,7 @@ describe("Login", function() {
 	    url: "http://localhost:7865/login",
 	    json: true,
 	    body: {
-		userName: 'JALLOE'
+		usame: 'JOE'
 	    }
 	};
 	request.post(op, function(err, res, body) {
