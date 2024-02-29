@@ -1,8 +1,9 @@
-function calculateNumber(a, b) {
-    const a = Math.round(a);
-    const b = Math.round(b);
-    const sum = a + b;
-    return c;
-}
+module.exports = function calculateNumber(a, b) {
+  const numberA = Number(a);
+  const numberB = Number(b);
 
-module.exports = calculateNumber;
+  if (Number.isNaN(numberA) || Number.isNaN(numberB))
+  throw TypeError;
+
+  return (Math.round(numberA) + Math.round(numberB));
+}
