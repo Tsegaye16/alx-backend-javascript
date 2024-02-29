@@ -11,7 +11,7 @@ module.exports = function calculateNumber(type, a, b) {
     return (Math.round(numberA) - Math.round(numberB));
   } else if (type === 'DIVIDE') {
       if (Math.round(numberB) === 0) {
-        return ('Error: number devided by zero error');
+        return ('Error: number devided by zero');
       }
       return (Math.round(numberA) / Math.round(numberB));
   } else {
